@@ -1,0 +1,42 @@
+{
+  "name": "git-smart-commit",
+  "version": "1.0.0",
+  "description": "Intelligent CLI tool that analyzes staged Git changes and generates meaningful commit messages",
+  "type": "module",
+  "bin": {
+    "git-smart-commit": "./src/cli.js"
+  },
+  "files": [
+    "src/**/*.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint src tests",
+    "prepublishOnly": "npm run lint && npm test"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "conventional-commits",
+    "cli",
+    "ai",
+    "openai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "inquirer": "^9.3.7",
+    "openai": "^4.52.7"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.6.0",
+    "eslint": "^9.9.0",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
